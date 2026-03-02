@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Subspace Chatbot</title>
+    <meta name="description" content="AI Customer Support Agent for Antigravity Services">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="header-info">
+                <div class="avatar">
+                    <i data-lucide="bot"></i>
+                    <span class="status-indicator online"></span>
+                </div>
+                <div>
+                    <h1>Azeem Aslam AI Agent</h1>
+                    <p class="status-text">Online - Ready to help</p>
+                </div>
+            </div>
+            <button class="settings-btn" aria-label="Settings">
+                <i data-lucide="more-vertical"></i>
+            </button>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-messages" id="chat-messages">
+            <!-- Initial Message -->
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hello! I'm the Azeem Aslam AI Agent. How can I assist you today?
+                </div>
+                <span class="timestamp">Just now</span>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="chat-input-area">
+            <form id="chat-form">
+                <div class="input-wrapper">
+                    <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+                    <button type="submit" id="send-button" aria-label="Send message" disabled>
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+            </form>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

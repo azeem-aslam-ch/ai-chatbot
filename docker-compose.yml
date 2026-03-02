@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - chatbot-network
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8001:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: always
+    networks:
+      - chatbot-network
+    # Optional: map local volume for development
+    # volumes:
+    #   - ./backend:/app
+
+networks:
+  chatbot-network:
+    driver: bridge
