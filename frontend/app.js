@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 3. Send to backend
-            const response = await fetch('/api/chat', {
+            const response = await fetch('https://azeembot-ai.onrender.com/api/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
